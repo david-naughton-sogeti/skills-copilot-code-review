@@ -6,6 +6,9 @@
   --primary-dark: #000051;
   --primary-text: #ffffff;
 
+  /* Breakpoints */
+  --breakpoint-xs: 600px;
+
   /* Secondary colors */
   --secondary: #ff6f00;
   --secondary-light: #ffa040;
@@ -30,6 +33,7 @@
   --error-light: #ffebee;
   --info: #0c5460;
   --info-light: #d1ecf1;
+  --announcement-bg-color: #007732;
 }
 
 * {
@@ -663,4 +667,19 @@ footer {
 
 #logout-button:hover {
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+.announcement-banner {
+  background-color: var(--announcement-bg-color);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+}
+
+@media (max-width: var(--breakpoint-xs)) {
+  .announcement-banner {
+    padding: 8px;
+    font-size: 0.95rem;
+  }
 }
